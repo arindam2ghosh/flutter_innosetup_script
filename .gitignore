@@ -1,0 +1,42 @@
+# Files and directories created by pub.
+.dart_tool/
+.packages
+
+# Dart docs
+doc/
+
+# Conventional directory for build output.
+build/
+
+# Ignore inno setup files.
+*.iss
+
+# Visual Studio Code
+.vscode/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/Output/
+
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
