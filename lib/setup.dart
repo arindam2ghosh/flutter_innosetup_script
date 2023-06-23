@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:innosetup/innosetup.dart';
+import 'package:process_run/shell.dart';
 
 /// Define name of the installer.
 class InnoSetupName {
@@ -106,10 +107,7 @@ ${runAfterInstall ? InnoSetupRunBuilder(app) : ''}
 
     File('build/innosetup.iss').writeAsStringSync('$iss');
 
-    await Process.start(
-      'iscc',
-      ['build/innosetup.iss'],
-      mode: ProcessStartMode.inheritStdio,
-    );
+    Shell shell = Shell();
+    await shell.run("ISCC.exe 'build/innosetup.iss'");
   }
 }

@@ -14,6 +14,7 @@ class InnoSetupApp {
     required this.name,
     required this.version,
     required this.publisher,
+    this.appId,
     // required this.urls,
     this.defaultInstallationDirectory="autopf",
   });
@@ -34,9 +35,16 @@ class InnoSetupApp {
   /// Refer [InnoSetupAppUrls] for more info.
   // final InnoSetupAppUrls urls;
   final String? defaultInstallationDirectory;
+  final String? appId;
 
   @override
-  String toString() => '''
+  String toString() => appId!=null?'''
+AppId={$appId}
+AppName="$name"
+AppVersion="$version"
+AppPublisher="$publisher"
+DefaultDirName="{$defaultInstallationDirectory}\\$name"
+''' : '''
 AppName="$name"
 AppVersion="$version"
 AppPublisher="$publisher"
